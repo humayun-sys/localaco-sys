@@ -1,0 +1,249 @@
+.jobs__banner__wrapper {
+  width: 100%;
+  height: 300px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  background-image: url("../assets/img/careers-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  // background-attachment: fixed;
+
+  .jobs__banner__overlay {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    opacity: 0.5;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+  }
+
+  h1 {
+    color: $white;
+    font-weight: 300;
+    z-index: 1;
+    letter-spacing: 1px;
+    font-size: 50px;
+  }
+}
+
+.jobsInfo__wrapper {
+  width: 100%;
+  background-color: $white;
+
+  padding: 50px 20px;
+
+  .jobsInfo__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin-top: 40px;
+
+    .jobsInfo__image {
+      width: 500px;
+      margin-right: 20px;
+
+      &.imgRight {
+        margin-right: 0px;
+        margin-left: 20px;
+      }
+
+      img {
+        width: 100%;
+
+        border-radius: 4px;
+      }
+    }
+
+    .jobsInfo__text {
+      width: 40%;
+
+      margin-left: 20px;
+
+      &.textLeft {
+        margin-left: 0px;
+        margin-right: 20px;
+      }
+
+      p {
+        line-height: 1.5;
+        letter-spacing: 1px;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.jobsApply__wrapper {
+  padding: 50px 20px;
+
+  padding-bottom: 70px;
+
+  .form__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    border-radius: 10px;
+
+    max-width: 70%;
+
+    margin: 0 auto;
+    margin-top: 40px;
+
+    overflow: hidden;
+
+    background-color: $white;
+    box-shadow: 0px 0px 40px 0.3px rgba($color: #000000, $alpha: 0.2);
+  }
+
+  form {
+    width: 45%;
+
+    padding: 30px 0;
+    padding-left: 40px;
+
+    .form__field {
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+
+      margin-bottom: 10px;
+
+      label,
+      input {
+        width: 100%;
+      }
+
+      input {
+        padding: 5px 10px;
+        margin-top: 5px;
+        font-size: 18px;
+      }
+    }
+
+    button {
+      width: 100%;
+
+      margin-top: 20px;
+      padding: 10px 0;
+
+      font-size: 18px;
+      letter-spacing: 1px;
+      color: $white;
+      cursor: pointer;
+
+      border: none;
+      background-color: $secondaryColor;
+    }
+  }
+
+  .form__image {
+    width: 45%;
+    height: 620px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .jobsInfo__wrapper {
+    .jobsInfo__container {
+      flex-direction: column-reverse;
+
+      .jobsInfo__image {
+        width: 500px;
+        margin-right: 0px;
+        margin-top: 30px;
+      }
+
+      .jobsInfo__text {
+        width: 80%;
+        margin-left: 0px;
+      }
+    }
+  }
+
+  .jobsApply__wrapper {
+    .form__wrapper {
+      max-width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .jobsInfo__wrapper {
+    .jobsInfo__container {
+      .jobsInfo__image {
+        width: 90%;
+        margin-right: 0px;
+        margin-top: 30px;
+      }
+
+      .jobsInfo__text {
+        width: 80%;
+        margin-left: 0px;
+      }
+    }
+  }
+
+  .jobsApply__wrapper {
+    .form__wrapper {
+      max-width: 90%;
+    }
+    form {
+      width: 100%;
+
+      padding: 40px;
+    }
+    .form__image {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .jobsInfo__wrapper {
+    .jobsInfo__container {
+      .jobsInfo__text {
+        width: 90%;
+      }
+    }
+  }
+
+  .jobs__banner__wrapper {
+    h1 {
+      text-align: center;
+      font-size: 35px;
+    }
+  }
+
+  .jobsApply__wrapper {
+    .form__wrapper {
+      max-width: 98%;
+    }
+    form {
+      width: 100%;
+
+      padding: 40px 15px;
+    }
+    .form__image {
+      display: none;
+    }
+  }
+}

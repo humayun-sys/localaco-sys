@@ -1,0 +1,47 @@
+@import "./variable";
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  // background: #dfe9ff;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.section__heading {
+  margin: 0 auto;
+
+  text-align: center;
+
+  h1 {
+    font-weight: 700;
+    color: $black;
+    letter-spacing: 1.2px;
+
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 16px;
+    color: grey;
+  }
+}
+
+@import "./header";
+@import "./footer";
+@import "./home";
+@import "./jobs";
+@import "./advertise";
+@import "./contact";
+@import "./tos";
+@import "./features";
